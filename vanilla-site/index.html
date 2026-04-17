@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignSpeak - Learn Sign Language</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/tailwind-chunk-1.css" />
+    <link rel="stylesheet" href="./assets/tailwind-chunk-2.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-background font-sans antialiased" data-page="dashboard">
+    <header
+      id="site-header"
+      class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+    >
+      <div class="container mx-auto flex h-16 items-center justify-between px-4">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <i data-lucide="Hand" class="h-6 w-6"></i>
+          </div>
+          <span class="text-xl font-bold text-foreground">SignSpeak</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1">
+          <a
+            data-route="alphabet"
+            href="alphabet.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Alphabet
+          </a>
+          <a
+            data-route="phrases"
+            href="phrases.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Phrases
+          </a>
+          <a
+            data-route="translator"
+            href="translator.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Translator
+          </a>
+          <a
+            data-route="categories"
+            href="categories.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Categories
+          </a>
+          <a
+            data-route="quiz"
+            href="quiz.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Quiz
+          </a>
+        </nav>
+
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          class="md:hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9"
+        >
+          <i id="icon-menu" data-lucide="Menu" class="h-6 w-6"></i>
+          <i id="icon-x" data-lucide="X" class="h-6 w-6 hidden"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden border-t border-border bg-background hidden">
+        <nav class="container mx-auto px-4 py-4 flex flex-col gap-2">
+          <a
+            data-mobile-link="true"
+            data-route="dashboard"
+            href="index.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Dashboard
+          </a>
+
+          <a
+            data-mobile-link="true"
+            data-route="alphabet"
+            href="alphabet.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Alphabet
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="phrases"
+            href="phrases.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Phrases
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="translator"
+            href="translator.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Translator
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="categories"
+            href="categories.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Categories
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="quiz"
+            href="quiz.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Quiz
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="relative overflow-hidden py-16 md:py-24">
+        <div class="container mx-auto px-4">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                <i data-lucide="Heart" class="h-4 w-4"></i>
+                Inclusive Learning for Everyone
+              </div>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
+                Learn Sign Language with <span class="text-primary">Confidence</span>
+              </h1>
+              <p class="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                Empowering deaf and mute individuals with an interactive platform to learn, practice, and
+                communicate through American Sign Language.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="alphabet.html"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-10 rounded-md px-6 has-[>svg]:px-4 text-lg px-8"
+                >
+                  Start Learning
+                </a>
+                <a
+                  href="quiz.html"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4 text-lg px-8"
+                >
+                  Take a Quiz <i data-lucide="Trophy" class="ml-2 h-5 w-5"></i>
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="relative aspect-square max-w-lg mx-auto">
+                <div class="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl"></div>
+                <img
+                  src="/images/hero-hands.jpg"
+                  alt="Diverse hands communicating through sign language"
+                  class="absolute inset-0 object-cover rounded-3xl relative z-10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-muted/30">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">What Would You Like to Learn?</h2>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Choose a section to start your sign language journey
+            </p>
+          </div>
+
+          <div id="nav-cards" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+              Why Learn with SignSpeak?
+            </h2>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our platform is designed to make learning sign language intuitive, engaging, and effective.
+            </p>
+          </div>
+
+          <div id="features-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-card py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <a href="index.html" class="flex items-center gap-2 mb-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                <i data-lucide="Hand" class="h-6 w-6"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">SignSpeak</span>
+            </a>
+            <p class="text-muted-foreground max-w-md leading-relaxed">
+              Empowering communication for the deaf and mute community through accessible sign language
+              education. Everyone deserves to be understood.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-foreground mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="alphabet.html" class="text-muted-foreground hover:text-primary transition-colors"
+                  >ASL Alphabet</a
+                >
+              </li>
+              <li>
+                <a href="phrases.html" class="text-muted-foreground hover:text-primary transition-colors"
+                  >Common Phrases</a
+                >
+              </li>
+              <li>
+                <a href="translator.html" class="text-muted-foreground hover:text-primary transition-colors"
+                  >Text Translator</a
+                >
+              </li>
+              <li>
+                <a href="categories.html" class="text-muted-foreground hover:text-primary transition-colors"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="quiz.html" class="text-muted-foreground hover:text-primary transition-colors"
+                  >Take a Quiz</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-foreground mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li>
+                <span class="text-muted-foreground">ASL Dictionary</span>
+              </li>
+              <li>
+                <span class="text-muted-foreground">Video Tutorials</span>
+              </li>
+              <li>
+                <span class="text-muted-foreground">Practice Exercises</span>
+              </li>
+              <li>
+                <span class="text-muted-foreground">Community Forum</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-muted-foreground">&copy; <span id="footer-year"></span> SignSpeak. All rights reserved.</p>
+          <p class="text-sm text-muted-foreground flex items-center gap-1">
+            Made with <i data-lucide="Heart" class="h-4 w-4 text-destructive fill-destructive"></i> for the deaf and mute
+            community
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+

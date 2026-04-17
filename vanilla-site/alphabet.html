@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASL Alphabet - SignSpeak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/tailwind-chunk-1.css" />
+    <link rel="stylesheet" href="./assets/tailwind-chunk-2.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-background font-sans antialiased" data-page="alphabet">
+    <header
+      id="site-header"
+      class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+    >
+      <div class="container mx-auto flex h-16 items-center justify-between px-4">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <i data-lucide="Hand" class="h-6 w-6"></i>
+          </div>
+          <span class="text-xl font-bold text-foreground">SignSpeak</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1">
+          <a
+            data-route="alphabet"
+            href="alphabet.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Alphabet
+          </a>
+          <a
+            data-route="phrases"
+            href="phrases.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Phrases
+          </a>
+          <a
+            data-route="translator"
+            href="translator.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Translator
+          </a>
+          <a
+            data-route="categories"
+            href="categories.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Categories
+          </a>
+          <a
+            data-route="quiz"
+            href="quiz.html"
+            class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Quiz
+          </a>
+        </nav>
+
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          class="md:hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9"
+        >
+          <i id="icon-menu" data-lucide="Menu" class="h-6 w-6"></i>
+          <i id="icon-x" data-lucide="X" class="h-6 w-6 hidden"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden border-t border-border bg-background hidden">
+        <nav class="container mx-auto px-4 py-4 flex flex-col gap-2">
+          <a
+            data-mobile-link="true"
+            data-route="dashboard"
+            href="index.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Dashboard
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="alphabet"
+            href="alphabet.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Alphabet
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="phrases"
+            href="phrases.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Phrases
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="translator"
+            href="translator.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Translator
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="categories"
+            href="categories.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Categories
+          </a>
+          <a
+            data-mobile-link="true"
+            data-route="quiz"
+            href="quiz.html"
+            class="px-4 py-3 rounded-lg font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-muted"
+          >
+            Quiz
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-background">
+        <div class="container mx-auto px-4">
+          <a href="index.html" class="inline-flex items-center text-muted-foreground hover:text-foreground mb-6 transition-colors">
+            <i data-lucide="ArrowLeft" class="h-4 w-4 mr-2"></i>
+            Back to Dashboard
+          </a>
+
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-14 w-14 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground">
+              <i data-lucide="BookOpen" class="h-7 w-7"></i>
+            </div>
+            <div>
+              <h1 class="text-3xl md:text-4xl font-bold text-foreground">ASL Alphabet</h1>
+              <p class="text-muted-foreground">26 Letters to Master</p>
+            </div>
+          </div>
+
+          <p class="text-lg text-muted-foreground max-w-3xl">
+            Click on any letter to see the hand sign and learn how to form it correctly. Each letter includes a detailed description of hand positioning.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-12">
+        <div class="container mx-auto px-4">
+          <div id="alphabet-grid" class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-9 gap-4"></div>
+        </div>
+      </section>
+
+      <section class="py-12 bg-muted/30">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold text-foreground mb-6">Tips for Learning the Alphabet</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+              <div class="px-6 p-6">
+                <h3 class="font-semibold text-foreground mb-2">Practice Daily</h3>
+                <p class="text-muted-foreground text-sm">Spend 10-15 minutes each day practicing the alphabet to build muscle memory.</p>
+              </div>
+            </div>
+            <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+              <div class="px-6 p-6">
+                <h3 class="font-semibold text-foreground mb-2">Use a Mirror</h3>
+                <p class="text-muted-foreground text-sm">Practice in front of a mirror to ensure your hand shapes match the images.</p>
+              </div>
+            </div>
+            <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+              <div class="px-6 p-6">
+                <h3 class="font-semibold text-foreground mb-2">Spell Your Name</h3>
+                <p class="text-muted-foreground text-sm">Start by learning to spell your name - it makes practice more personal and fun!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-card py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <a href="index.html" class="flex items-center gap-2 mb-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                <i data-lucide="Hand" class="h-6 w-6"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">SignSpeak</span>
+            </a>
+            <p class="text-muted-foreground max-w-md leading-relaxed">
+              Empowering communication for the deaf and mute community through accessible sign language education. Everyone deserves to be understood.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-foreground mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="alphabet.html" class="text-muted-foreground hover:text-primary transition-colors">ASL Alphabet</a></li>
+              <li><a href="phrases.html" class="text-muted-foreground hover:text-primary transition-colors">Common Phrases</a></li>
+              <li><a href="translator.html" class="text-muted-foreground hover:text-primary transition-colors">Text Translator</a></li>
+              <li><a href="categories.html" class="text-muted-foreground hover:text-primary transition-colors">Categories</a></li>
+              <li><a href="quiz.html" class="text-muted-foreground hover:text-primary transition-colors">Take a Quiz</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-foreground mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li><span class="text-muted-foreground">ASL Dictionary</span></li>
+              <li><span class="text-muted-foreground">Video Tutorials</span></li>
+              <li><span class="text-muted-foreground">Practice Exercises</span></li>
+              <li><span class="text-muted-foreground">Community Forum</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-muted-foreground">&copy; <span id="footer-year"></span> SignSpeak. All rights reserved.</p>
+          <p class="text-sm text-muted-foreground flex items-center gap-1">
+            Made with <i data-lucide="Heart" class="h-4 w-4 text-destructive fill-destructive"></i> for the deaf and mute community
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Letter Dialog -->
+    <div id="letter-dialog-overlay" class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 hidden" data-state="closed"></div>
+    <div
+      id="letter-dialog-content"
+      class="bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg hidden"
+      data-state="closed"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="letter-dialog-title"
+    >
+      <button
+        type="button"
+        class="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+        id="letter-dialog-close-btn"
+      >
+        <i data-lucide="X"></i>
+        <span class="sr-only">Close</span>
+      </button>
+
+      <div class="flex flex-col gap-2 text-center sm:text-left">
+        <h2 id="letter-dialog-title" class="text-lg leading-none font-semibold text-3xl flex items-center gap-3">Letter</h2>
+        <p class="text-muted-foreground text-sm" id="letter-dialog-description">Learn how to sign this letter correctly</p>
+      </div>
+
+      <div id="letter-dialog-body"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
